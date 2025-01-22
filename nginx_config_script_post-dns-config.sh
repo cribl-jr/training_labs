@@ -7,5 +7,6 @@ sudo systemctl restart nginx
 certbot --nginx --non-interactive --agree-tos --domains floss.pub --email jr@cribl.io
 certbot --nginx --non-interactive --agree-tos --domains www.floss.pub --email jr@cribl.io
 mkdir -p /opt/docker/apache/html/
-echo "this is a test" | touch -a /opt/docker/apache/html/index.html
-docker run -dit --name my-apache-app -p 8080:80 -v "/opt/docker/apache/html/":"/usr/local/apache2/htdocs/" --ip 172.17.0.2 httpd:2.4
+touch /opt/docker/apache/html/index.html
+echo "this is a test" | tee -a /opt/docker/apache/html/index.html
+docker run -dit --name my-apache-app -p 8080:80 -v "/opt/docker/apache/html/":"/usr/local/apache2/htdocs/" httpd:2.4
