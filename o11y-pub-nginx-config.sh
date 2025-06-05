@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -o /etc/nginx/sites-available/www-011y-pub.con "https://raw.githubusercontent.com/cribl-jr/training_labs/main/www-o11y-pub.conf"
+curl -o /etc/nginx/sites-available/www-011y-pub.conf "https://raw.githubusercontent.com/cribl-jr/training_labs/main/www-o11y-pub.conf"
 curl -o /etc/nginx/sites-available/011y-pub.conf "https://raw.githubusercontent.com/cribl-jr/training_labs/main/o11y-pub.conf"
 sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/www-011y-pub.conf
 sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/o11y-pub.conf
