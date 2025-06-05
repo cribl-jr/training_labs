@@ -2,7 +2,7 @@
 curl -o /etc/nginx/sites-available/www-011y-pub.conf "https://raw.githubusercontent.com/cribl-jr/training_labs/main/www-o11y-pub.conf"
 curl -o /etc/nginx/sites-available/011y-pub.conf "https://raw.githubusercontent.com/cribl-jr/training_labs/main/o11y-pub.conf"
 sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/www-011y-pub.conf
-sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/o11y-pub.conf
+sudo ln -s /etc/nginx/sites-available/011y-pub.conf /etc/nginx/sites-enabled/o11y-pub.conf
 sudo systemctl restart nginx
 certbot --nginx --non-interactive --agree-tos --domains o11y.pub --email jr@cribl.io
 certbot --nginx --non-interactive --agree-tos --domains www.o11y.pub --email jr@cribl.io
