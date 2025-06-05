@@ -4,8 +4,8 @@ curl -o /etc/nginx/sites-available/floss.pub.conf "https://raw.githubusercontent
 sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/www-011y-pub.conf
 sudo ln -s /etc/nginx/sites-available/www-011y-pub.conf /etc/nginx/sites-enabled/o11y-pub.conf
 sudo systemctl restart nginx
-certbot --nginx --non-interactive --agree-tos --domains floss.pub --email jr@cribl.io
-certbot --nginx --non-interactive --agree-tos --domains www.floss.pub --email jr@cribl.io
+certbot --nginx --non-interactive --agree-tos --domains o11y.pub --email jr@cribl.io
+certbot --nginx --non-interactive --agree-tos --domains www.o11y.pub --email jr@cribl.io
 mkdir -p /opt/docker/apache/html/
 touch /opt/docker/apache/html/index.html
 echo "this is a test" | tee -a /opt/docker/apache/html/index.html
